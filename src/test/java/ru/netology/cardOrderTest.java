@@ -14,7 +14,7 @@ public class cardOrderTest {
         $("[data-test-id=name] input").setValue("Петр Васильев");
         $("[data-test-id=phone] input").setValue("+79266264578");
         $("[data-test-id=agreement]").click();
-        $$("button").find(exactText("Продолжить")).click();
-        $("[data-test-id]").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        $("[role=button]").click();
+        $(".Success_successBlock__2L3Cw").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
     }
 }
